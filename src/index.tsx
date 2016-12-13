@@ -1,3 +1,4 @@
 import { h, render } from "preact";
+import Application from "./components/Application";
 
-render(<span>Hello world!</span>, document.getElementById("app") !);
+render(<Application compiler="TypeScript" framework="React" />, document.getElementById("app") !);

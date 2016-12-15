@@ -2,7 +2,8 @@
   "name": "preact-boilerplate",
   "scripts": {
     "dev": "rollup -c --watch --environment DEV",
-    "build": "rollup -c --environment PRODUCTION"
+    "build": "rollup -c --environment PRODUCTION",
+    "clean": "rm build/bundle.js build/bundle.js.map"
   },
   "dependencies": {
     "preact": "^7.1.0",

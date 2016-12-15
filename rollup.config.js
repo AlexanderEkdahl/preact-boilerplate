@@ -7,6 +7,7 @@ import serve from 'rollup-plugin-serve';
 const configuration = {
   entry: "src/index.tsx",
   dest: "build/bundle.js",
+  sourceMap: true,
   plugins: [
     typescript({
       typescript: require("typescript"),

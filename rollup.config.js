@@ -1,8 +1,8 @@
+import { minify } from "uglify-js";
+import nodeResolve from "rollup-plugin-node-resolve";
+import serve from "rollup-plugin-serve";
 import typescript from "rollup-plugin-typescript";
-import nodeResolve from 'rollup-plugin-node-resolve';
-import uglify from 'rollup-plugin-uglify';
-import { minify } from 'uglify-js';
-import serve from 'rollup-plugin-serve';
+import uglify from "rollup-plugin-uglify";
 
 const configuration = {
   entry: "src/index.tsx",
@@ -18,14 +18,18 @@ const configuration = {
 
 if (process.env.PRODUCTION) {
   configuration.plugins.push(
-    uglify({}, minify)
+    uglify({
+      mangle: {
+        toplevel: true,
+      },
+    }, minify)
   );
 }
 
 if (process.env.DEV) {
   configuration.plugins.push(
     serve({
-      contentBase: 'build',
+      contentBase: "build",
       historyApiFallback: false,
       port: 8080
     })

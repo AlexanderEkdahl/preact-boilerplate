@@ -1,8 +1,8 @@
-import { minify } from "uglify-js";
-import nodeResolve from "rollup-plugin-node-resolve";
-import serve from "rollup-plugin-serve";
 import typescript from "rollup-plugin-typescript";
+import nodeResolve from "rollup-plugin-node-resolve";
 import uglify from "rollup-plugin-uglify";
+import { minify } from "uglify-js";
+import serve from "rollup-plugin-serve";
 
 const configuration = {
   entry: "src/index.tsx",
@@ -12,7 +12,7 @@ const configuration = {
     typescript({
       typescript: require("typescript"),
     }),
-    nodeResolve({ jsnext: true, main: true, browser: true }),
+    nodeResolve({ jsnext: true, browser: true }),
   ],
 };
 

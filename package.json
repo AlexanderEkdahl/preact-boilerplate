@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "rollup -c --watch --environment DEV",
     "build": "rollup -c --environment PRODUCTION",
-    "clean": "rm build/bundle.js build/bundle.js.map"
+    "clean": "rm dist/bundle.js dist/bundle.js.map"
   },
   "dependencies": {
     "preact": "^7.1.0"

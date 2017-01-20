@@ -6,7 +6,8 @@ import serve from "rollup-plugin-serve";
 
 const configuration = {
   entry: "src/index.tsx",
-  dest: "build/bundle.js",
+  dest: "dist/bundle.js",
+  format: "es",
   sourceMap: true,
   plugins: [
     typescript({
@@ -29,7 +30,7 @@ if (process.env.PRODUCTION) {
 if (process.env.DEV) {
   configuration.plugins.push(
     serve({
-      contentBase: "build",
+      contentBase: "dist",
       historyApiFallback: false,
       port: 8080
     })

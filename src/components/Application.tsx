@@ -1,17 +1,17 @@
-import { h, Component } from "preact";
+import { Component, h } from "preact";
 
-export interface ApplicationProps {
+export interface IApplicationProps {
     compiler: string;
     framework: string;
 }
 
-export default class Application extends Component<ApplicationProps, {}> {
-    render() {
+export default class Application extends Component<IApplicationProps, {}> {
+    public render() {
         return (
             <div>
                 <h1>Hello from {this.props.framework} and {this.props.compiler}!</h1>
                 <span>Made awesome with VSCode</span>
             </div>
-        )
+        );
     }
 }

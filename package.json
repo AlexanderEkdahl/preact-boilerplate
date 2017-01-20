@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "rollup -c --watch --environment DEV",
     "build": "rollup -c --environment PRODUCTION",
-    "clean": "rm dist/bundle.js dist/bundle.js.map"
+    "clean": "rm dist/bundle.js dist/bundle.js.map",
+    "lint": "tslint --project tsconfig.json --fix"
   },
   "dependencies": {
     "preact": "^7.1.0"
@@ -16,6 +17,8 @@
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^3.2.2",
     "tslib": "^1.5.0",
+    "tslint": "^4.3.1",
+    "tslint-react": "^2.3.0",
     "typescript": "^2.1.5",
     "uglify-js": "mishoo/UglifyJS2#harmony"
   }

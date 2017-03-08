@@ -19,7 +19,7 @@
             "args": [
                 "dev"
             ],
-            "isWatching": true
+            "isBackground": true
         }
     ]
 }

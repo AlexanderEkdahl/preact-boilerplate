@@ -8,7 +8,7 @@
     "lint": "tslint --project tsconfig.json --fix"
   },
   "dependencies": {
-    "preact": "^7.1.0"
+    "preact": "^7.2.0"
   },
   "devDependencies": {
     "rollup": "^0.41.4",
